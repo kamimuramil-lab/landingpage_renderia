@@ -30,7 +30,7 @@
   --radius-m:  14px;
   --radius-l:  22px;
 
-  --wrap: 1320px;
+  --wrap: 1460px;
 }
 
 *, *::before, *::after{ box-sizing: border-box; }
@@ -207,9 +207,14 @@ button{ font-family: inherit; cursor: pointer; }
 }
 .nav-links a:hover{ color: var(--text); }
 .nav-cta{ display:flex; gap:12px; }
+.btn-whatsapp-nav{ padding: 13px 22px; }
 
 @media (max-width: 880px){
   .nav-links{ display:none; }
+  .brand-badge{ width: 42px; height: 42px; border-radius: 12px; }
+  .brand-name{ font-size: 19px; }
+  .btn-whatsapp-nav{ padding: 12px; border-radius: 50%; }
+  .btn-whatsapp-nav-texto{ display:none; }
 }
 
 /* ==========================================================================
@@ -257,7 +262,7 @@ button{ font-family: inherit; cursor: pointer; }
 .hero-logo-wrap img{ width:100%; height:100%; object-fit: cover; }
 @media (max-width: 980px){
   .hero-grid{ grid-template-columns: 1fr; }
-  .hero-logo-wrap{ max-width: 320px; margin: 0 auto; }
+  .hero-logo-wrap{ display: none; }
 }
 .hero-note{
   margin-top: 18px;
@@ -643,6 +648,27 @@ button{ font-family: inherit; cursor: pointer; }
   .features-grid{ grid-template-columns: 1fr; }
   .hero{ padding-top: 128px; }
   .pre-venda{ padding: 40px 24px; }
+  .comparador{ aspect-ratio: 4/5; }
+  .galeria-comparador{ aspect-ratio: 4/5; }
+}
+
+/* Reforço de tamanho de fonte só pra desktop -- no mobile os tamanhos
+   já ficaram bons, então isso soma por cima só quando há espaço de
+   tela de sobra pra ler mais confortavelmente. */
+@media (min-width: 981px){
+  body{ font-size: 19px; }
+  .hero-copy p.lead{ font-size: 22px; }
+  .section-head p{ font-size: 20px; }
+  .feature p{ font-size: 17px; }
+  .feature h3{ font-size: 19.5px; }
+  .dor p{ font-size: 18.5px; }
+  .solucao-copy p{ font-size: 19px; }
+  .passo p{ font-size: 17px; }
+  .passo h3{ font-size: 20px; }
+  .faq-q{ font-size: 19px; }
+  .faq-a-inner{ font-size: 17.5px; }
+  .pre-venda p{ font-size: 19px; }
+  .fluxo-linha b{ font-size: 17px; }
 }
 
 /* Navegadores muito antigos sem suporte a aspect-ratio (praticamente
