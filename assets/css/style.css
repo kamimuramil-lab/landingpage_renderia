@@ -35,7 +35,7 @@
 
 *, *::before, *::after{ box-sizing: border-box; }
 
-html{ scroll-behavior: smooth; }
+html{ scroll-behavior: smooth; overflow-x: hidden; }
 
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior: auto; }
@@ -50,6 +50,8 @@ body{
   font-size: 17px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 /* grade de plano técnico, discreta, atrás de tudo */
@@ -265,6 +267,7 @@ button{ font-family: inherit; cursor: pointer; }
   background: var(--bg-elev);
   cursor: ew-resize;
   user-select: none;
+  touch-action: none; /* essencial no iOS/mobile: sem isso, arrastar no slider rola a página inteira em vez de mover o slider */
 }
 .comparador img{
   position: absolute; inset: 0;
@@ -467,6 +470,7 @@ button{ font-family: inherit; cursor: pointer; }
   aspect-ratio: 16/9.4; min-height: 320px;
   background: var(--bg-elev);
   cursor: ew-resize;
+  touch-action: none; /* mesmo motivo do .comparador acima */
   user-select: none;
 }
 .galeria-comparador img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; pointer-events:none; }

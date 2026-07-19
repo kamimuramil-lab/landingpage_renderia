@@ -23,7 +23,10 @@ function iniciarComparador(el) {
     mover(e.clientX);
   });
   el.addEventListener('pointermove', (e) => {
-    if (arrastando) mover(e.clientX);
+    if (arrastando) {
+      e.preventDefault();
+      mover(e.clientX);
+    }
   });
   el.addEventListener('pointerup', () => arrastando = false);
   el.addEventListener('pointerleave', () => arrastando = false);
