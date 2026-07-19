@@ -30,7 +30,7 @@
   --radius-m:  14px;
   --radius-l:  22px;
 
-  --wrap: 1460px;
+  --wrap: 1700px;
 }
 
 *, *::before, *::after{ box-sizing: border-box; }
@@ -116,7 +116,7 @@ button{ font-family: inherit; cursor: pointer; }
   margin-bottom: 56px;
 }
 .section-head h2{
-  font-size: clamp(32px, 4.2vw, 46px);
+  font-size: clamp(34px, 4.6vw, 54px);
   margin-top: 14px;
 }
 .section-head p{
@@ -233,7 +233,7 @@ button{ font-family: inherit; cursor: pointer; }
 }
 .hero-copy{ max-width: 760px; }
 .hero-copy h1{
-  font-size: clamp(40px, 5.8vw, 70px);
+  font-size: clamp(42px, 6.4vw, 82px);
   margin-top: 18px;
 }
 .hero-copy .accent-word{
@@ -396,7 +396,7 @@ button{ font-family: inherit; cursor: pointer; }
   padding: 48px;
 }
 .solucao-grid{ display:grid; grid-template-columns: 1.1fr .9fr; gap: 54px; align-items:center; }
-.solucao-copy h2{ font-size: clamp(28px,3.6vw,38px); }
+.solucao-copy h2{ font-size: clamp(30px,4vw,44px); }
 .solucao-copy p{ margin-top:18px; color: var(--text-dim); font-size: 18px; }
 .solucao-fluxo{
   display:flex; flex-direction:column; gap:0;
@@ -541,7 +541,7 @@ button{ font-family: inherit; cursor: pointer; }
 }
 .pre-venda .eyebrow{ justify-content:center; }
 .pre-venda .eyebrow::before{ display:none; }
-.pre-venda h2{ font-size: clamp(28px,4vw,40px); margin-top:16px; }
+.pre-venda h2{ font-size: clamp(30px,4.4vw,46px); margin-top:16px; }
 .pre-venda p{ margin-top:16px; color:var(--text-dim); font-size:18px; max-width:540px; margin-left:auto; margin-right:auto; }
 .pre-venda .hero-actions{ justify-content:center; margin-top:30px; }
 
@@ -597,7 +597,7 @@ button{ font-family: inherit; cursor: pointer; }
   text-align:center;
   padding: 70px 0 50px;
 }
-.cta-final h2{ font-size: clamp(30px,4.4vw,48px); }
+.cta-final h2{ font-size: clamp(32px,4.8vw,54px); }
 .cta-final .hero-actions{ justify-content:center; margin-top:30px; }
 
 /* ==========================================================================
@@ -656,19 +656,22 @@ button{ font-family: inherit; cursor: pointer; }
    já ficaram bons, então isso soma por cima só quando há espaço de
    tela de sobra pra ler mais confortavelmente. */
 @media (min-width: 981px){
-  body{ font-size: 19px; }
-  .hero-copy p.lead{ font-size: 22px; }
-  .section-head p{ font-size: 20px; }
-  .feature p{ font-size: 17px; }
-  .feature h3{ font-size: 19.5px; }
-  .dor p{ font-size: 18.5px; }
-  .solucao-copy p{ font-size: 19px; }
-  .passo p{ font-size: 17px; }
-  .passo h3{ font-size: 20px; }
-  .faq-q{ font-size: 19px; }
-  .faq-a-inner{ font-size: 17.5px; }
-  .pre-venda p{ font-size: 19px; }
-  .fluxo-linha b{ font-size: 17px; }
+  body{ font-size: 22px; }
+  .hero-copy p.lead{ font-size: 25px; }
+  .section-head p{ font-size: 23px; }
+  .feature p{ font-size: 19.5px; }
+  .feature h3{ font-size: 22px; }
+  .dor p{ font-size: 21px; }
+  .solucao-copy p{ font-size: 22px; }
+  .passo p{ font-size: 19.5px; }
+  .passo h3{ font-size: 23px; }
+  .faq-q{ font-size: 22px; }
+  .faq-a-inner{ font-size: 20px; }
+  .pre-venda p{ font-size: 22px; }
+  .fluxo-linha b{ font-size: 19px; }
+  .eyebrow{ font-size: 14.5px; }
+  .btn{ font-size: 18px; }
+  .btn-lg{ font-size: 19px; padding: 20px 36px; }
 }
 
 /* Navegadores muito antigos sem suporte a aspect-ratio (praticamente
