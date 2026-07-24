@@ -37,7 +37,20 @@
 </style>
 </head>
 <body>
-<script>if('scrollRestoration' in history){history.scrollRestoration='manual';}window.scrollTo(0,0);window.addEventListener('load',function(){window.scrollTo(0,0);});</script>
+<script>if('scrollRestoration' in history){history.scrollRestoration='manual';}window.scrollTo(0,0);window.addEventListener('load',function(){window.scrollTo(0,0);});
+(function(){
+  function applyResponsive(){
+    var topo = document.getElementById('topo');
+    var resultsGrid = document.querySelector('.results-grid');
+    var isMobile = window.innerWidth <= 760;
+    if (topo) topo.style.gridTemplateColumns = isMobile ? '1fr' : 'minmax(320px,0.85fr) minmax(420px,1.25fr)';
+    if (resultsGrid) resultsGrid.style.gridTemplateColumns = isMobile ? '1fr' : 'repeat(2,1fr)';
+  }
+  applyResponsive();
+  window.addEventListener('resize', applyResponsive);
+  window.addEventListener('DOMContentLoaded', applyResponsive);
+})();
+</script>
 <div style="font-family:'Work Sans',sans-serif;background:oklch(0.15 0.012 250);color:oklch(0.97 0.01 250);overflow-x:hidden;">
 
   <header style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:18px clamp(20px,5vw,64px);background:oklch(0.15 0.012 250 / 0.85);backdrop-filter:blur(12px);border-bottom:1px solid oklch(0.32 0.02 250 / 0.4);">
