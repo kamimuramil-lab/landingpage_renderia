@@ -3,8 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RENDERIA — Do 3D ao fotorrealista, em minutos</title>
-<meta name="description" content="RENDERIA transforma capturas do seu projeto 3D em imagens fotorrealistas com Inteligência Artificial. Feito por um arquiteto, para quem vive de apresentação.">
+<title>RENDERIA - Seu escritório muito mais inteligente.</title>
+<meta name="description" content="RENDERIA - Seu escritório muito mais inteligente.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="RENDERIA - Seu escritório muito mais inteligente.">
+<meta property="og:description" content="RENDERIA - Seu escritório muito mais inteligente.">
+<meta property="og:image" content="https://renderia-app.onrender.com/assets/img/logo.jpg">
+<meta property="og:url" content="https://renderia-app.onrender.com/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="RENDERIA - Seu escritório muito mais inteligente.">
+<meta name="twitter:image" content="https://renderia-app.onrender.com/assets/img/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -13,6 +21,10 @@
   ::selection{background:oklch(0.78 0.14 75);color:oklch(0.15 0.012 250);}
   details > summary{list-style:none;cursor:pointer;}
   details > summary::-webkit-details-marker{display:none;}
+  @media (max-width:760px){
+    #topo{grid-template-columns:1fr !important;}
+    .results-grid{grid-template-columns:1fr !important;}
+  }
   a{text-decoration:none;}
   .btn-nav{background:oklch(0.78 0.14 75);color:oklch(0.15 0.012 250);}
   .btn-nav:hover{background:oklch(0.83 0.14 75);}
@@ -25,7 +37,20 @@
 </style>
 </head>
 <body>
-
+<script>if('scrollRestoration' in history){history.scrollRestoration='manual';}window.scrollTo(0,0);window.addEventListener('load',function(){window.scrollTo(0,0);});
+(function(){
+  function applyResponsive(){
+    var topo = document.getElementById('topo');
+    var resultsGrid = document.querySelector('.results-grid');
+    var isMobile = window.innerWidth <= 760;
+    if (topo) topo.style.gridTemplateColumns = isMobile ? '1fr' : 'minmax(320px,0.85fr) minmax(420px,1.25fr)';
+    if (resultsGrid) resultsGrid.style.gridTemplateColumns = isMobile ? '1fr' : 'repeat(2,1fr)';
+  }
+  applyResponsive();
+  window.addEventListener('resize', applyResponsive);
+  window.addEventListener('DOMContentLoaded', applyResponsive);
+})();
+</script>
 <div style="font-family:'Work Sans',sans-serif;background:oklch(0.15 0.012 250);color:oklch(0.97 0.01 250);overflow-x:hidden;">
 
   <header style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:18px clamp(20px,5vw,64px);background:oklch(0.15 0.012 250 / 0.85);backdrop-filter:blur(12px);border-bottom:1px solid oklch(0.32 0.02 250 / 0.4);">
@@ -207,7 +232,7 @@
         <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,3.2vw,40px);line-height:1.15;color:oklch(0.97 0.01 250);margin:12px 0 16px;letter-spacing:-0.01em;text-wrap:pretty;">Arraste pra comparar.</h2>
         <p style="font-size:17px;line-height:1.6;color:oklch(0.72 0.02 250);margin:0;">Capturas cruas de projetos reais, transformadas pelo RENDERIA.</p>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:32px;">
+      <div class="results-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:32px;">
 
         <div>
           <div class="js-compare" style="position:relative;overflow:hidden;border-radius:16px;aspect-ratio:4/3;cursor:ew-resize;user-select:none;background:oklch(0.22 0.015 250);">
